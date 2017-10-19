@@ -1,0 +1,8 @@
+sudo: false
+language: python
+python: "3.6"
+install:
+  - pip install -r requirements.txt
+script:
+  - ./scrape.py stable --out stable.json
+  - ./scrape.py edge --out edge.json
