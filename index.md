@@ -1,5 +1,11 @@
 ## Docker for Mac download links
 
+Release versions can be correlated against the
+[Official Release Notes](https://docs.docker.com/docker-for-mac/release-notes/).
+
+Note: Not all builds result in a release, so it's recommended you pick the
+largest build number for the particular release you're interested in.
+
 ## Stable
 
 {% assign stable_versions = site.data.stable | group_by: 'x-amz-meta-version' %}
