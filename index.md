@@ -2,12 +2,14 @@
 
 ## Stable
 
-{% for build in site.data.stable %}
+{% assign stable = (site.data.stable | sort: 'x-amz-meta-build' ) | reverse %}
+{% for build in stable %}
 * [{{ build.x-amz-meta-version }} Build {{ build.x-amz-meta-build }}]({{ build.url }})
 {% endfor %}
 
 ## Edge
 
-{% for build in site.data.edge %}
+{% assign edge = (site.data.edge | sort: 'x-amz-meta-build' ) | reverse %}
+{% for build in edge %}
 * [{{ build.x-amz-meta-version }} Build {{ build.x-amz-meta-build }}]({{ build.url }})
 {% endfor %}
